@@ -1,12 +1,18 @@
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image } from 'react-native';
 
 export default function App() {
   return (
     <View style={estilos.main}>
+
+      <Image style={estilos.Logo} source={require("@/assets/imagenes/ELEMENTOS_GENERALES/logo2.png")}/>
+
       <Text style={estilos.texto}>Bienvenido a</Text>
       <Text style={[estilos.texto, estilos.titulo]}>Petconnet</Text>
 
       <View style={estilos.fondoBlanco}>
+
+      <Image style={estilos.Gato} source={require("@/assets/imagenes/PAGINA REGISTRO E INICIO DE SESION/gatito.png")}/>
+
         <Text style={estilos.accede}>Accede al refugio</Text>
 
         <TextInput
@@ -48,7 +54,14 @@ const estilos = StyleSheet.create({
     justifyContent: 'flex-start',
     paddingTop: 80,
   },
+  Logo: {
+    width: 50,
+    height: 50,
+    left:150,
+    bottom:50,
+  },
   texto: {
+    bottom:30,
     fontSize: 20,
     color: '#F9F9F9',
     fontFamily: 'Roboto',
@@ -68,11 +81,17 @@ const estilos = StyleSheet.create({
     alignItems: 'center',
     padding: 20,
   },
+  Gato:{
+    height:220,
+    width:220,
+    bottom:70,
+  },
   accede: {
     fontSize: 30,
     color: '#194A6E',
-    marginBottom: 20,
+    marginBottom: 40,
     fontWeight: 'bold',
+    marginTop:-50,
   },
   input: {
     width: 330,
@@ -105,8 +124,8 @@ const estilos = StyleSheet.create({
     fontSize: 20,
     color: '#194A6E',
     fontWeight: 'bold',
-    paddingRight:15,
-    paddingLeft:15,
+    paddingRight:25,
+    paddingLeft:25,
   },
   textoRegistro: {
     color: '#194A6E',
