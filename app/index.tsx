@@ -37,7 +37,7 @@ export default function App() {
         </View>
         <View style={estilos.contenedorBotones}>
           <TouchableOpacity style={estilos.boton}>
-            <Text style={estilos.textoBoton}>Acceder</Text>
+            <Link style={estilos.textoBoton}  href="/Principal">Acceder</Link>
           </TouchableOpacity>
           <Text style={estilos.textoO}>o</Text>
           <Link style={estilos.textoRegistro} href="/registro">Regístrate</Link>
