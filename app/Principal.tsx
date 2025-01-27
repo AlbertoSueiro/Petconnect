@@ -8,10 +8,8 @@ const principal: React.FC = () => {
         <TouchableOpacity style={styles.menuButton} disabled>
           <Text style={styles.menuText}>☰</Text> {/* Botón de menú no se si al final sera o no funcional*/}
         </TouchableOpacity>
-        <View style={styles.companyInfo}>
-          <Image source={require("../assets/imagenes/ELEMENTOS_GENERALES/logo2.png")} style={styles.logo} />
-          <Text style={styles.companyName}>PetConnect</Text>
-        </View>
+        <Text style={styles.companyName}>PetConnect</Text>
+        <Image source={require("../assets/imagenes/ELEMENTOS_GENERALES/logo2.png")} style={styles.logo} />
       </View>
 
       {/* Información del usuario */}
@@ -27,22 +25,27 @@ const principal: React.FC = () => {
       <View style={styles.buttons}>
         <Text style={styles.title}>SECCIONES</Text>
         <View style={styles.buttonsRow}>
-          <TouchableOpacity style={styles.button} onPress={() => {/* Navegar a pagina 1 */}}>
+          <TouchableOpacity style={[styles.button, { backgroundColor: '#FD7712' }]} onPress={() => {/* Navegar a pagina 1 */}}>
             <Image source={require('../assets/imagenes/principal/huella.png')} style={styles.buttonImage} />
+            <Text style={styles.buttonText}>Patitas al Rescate</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.button} onPress={() => {/* Navegar a pagina 2 */}}>
+          <TouchableOpacity style={[styles.button, { backgroundColor: '#FD7712' }]} onPress={() => {/* Navegar a pagina 2 */}}>
             <Image source={require('../assets/imagenes/principal/manos.png')} style={styles.buttonImage} />
+            <Text style={styles.buttonText}>Comunidad Animal</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.button} onPress={() => {/* Navegar a pagina 3 */}}>
+          <TouchableOpacity style={[styles.button, { backgroundColor: '#FD7712' }]} onPress={() => {/* Navegar a pagina 3 */}}>
             <Image source={require('../assets/imagenes/principal/adopt.png')} style={styles.buttonImage} />
+            <Text style={styles.buttonText}>Refugio de Patitas</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.buttonsRow}>
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={[styles.button, { backgroundColor: '#FD7712' }]}>
             <Image source={require('../assets/imagenes/principal/huellas.png')} style={styles.buttonImage} />
+            <Text style={styles.buttonText}>Patitas en Marcha</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={[styles.button, { backgroundColor: '#FD7712' }]}>
             <Image source={require('../assets/imagenes/principal/lupa.png')} style={styles.buttonImage} />
+            <Text style={styles.buttonText}>Sobre PetConnect</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -74,35 +77,44 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingBottom: 16,
-    borderBottomWidth: 1,
     borderColor: '#ccc',
+    backgroundColor: '#194A6E', // Color de fondo del header
+    paddingHorizontal: 16,
+    borderTopLeftRadius: 16,
+    borderTopRightRadius: 16,
   },
   menuButton: {
     backgroundColor: 'transparent',
     padding: 0,
   },
   menuText: {
-    fontSize: 24,
+    fontSize: 32,
+    color: '#fff',
   },
   companyInfo: {
     flexDirection: 'row',
     alignItems: 'center',
-    
   },
   logo: {
     width: 40,
     height: 40,
-    marginRight: 8,
+    marginLeft: 8,
   },
   companyName: {
-    fontSize: 18,
+    fontSize: 32, 
     fontWeight: 'bold',
     fontFamily: 'WendyOne',
+    color: '#fff', 
   },
   userInfo: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginVertical: 16,
+    marginVertical: 0,
+    backgroundColor: '#194A6E', 
+    padding: 16,
+    borderRadius: 0,
+    borderBottomLeftRadius: 16,
+    borderBottomRightRadius: 16,
   },
   userImage: {
     width: 80,
@@ -113,18 +125,21 @@ const styles = StyleSheet.create({
   userName: {
     margin: 0,
     fontSize: 20,
+    color: '#fff', 
   },
   userProfile: {
     margin: 0,
     fontSize: 16,
-    color: '#666',
+    color: '#ccc', 
   },
   buttons: {
     alignItems: 'center',
     marginVertical: 32,
   },
   title: {
-    fontSize: 24,
+    fontSize: 32,
+    fontWeight: 'bold',
+    color: '#FD7712',
     marginBottom: 16,
   },
   buttonsRow: {
@@ -134,19 +149,32 @@ const styles = StyleSheet.create({
   },
   button: {
     marginHorizontal: 8,
+    borderRadius: 8,
+    padding: 8,
+    alignItems: 'center',
   },
   buttonImage: {
     width: 100,
     height: 100,
-    backgroundColor:'FD7712',
+  },
+  buttonText: {
+    marginTop: 8,
+    fontSize: 16,
+    color: '#fff',
+    textAlign: 'center',
   },
   footer: {
     alignItems: 'center',
     marginTop: 32,
+    backgroundColor: '#194A6E', // Color de fondo del footer
+    padding: 16,
+    borderTopLeftRadius: 16,
+    borderTopRightRadius: 16,
   },
   subTitle: {
-    fontSize: 20,
+    fontSize: 24, // Tamaño más grande
     marginBottom: 16,
+    color: '#fff', // Ajustar color del texto para mejor contraste
   },
   footerImages: {
     flexDirection: 'row',
