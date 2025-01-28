@@ -1,120 +1,137 @@
-import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 
-const principal: React.FC = () => {
+const Principal: React.FC = () => {
   return (
-    <View style={styles.container}>
+    <View style={styles.main}>
       {/* Encabezado */}
       <View style={styles.header}>
         <TouchableOpacity style={styles.menuButton} disabled>
-          <Text style={styles.menuText}>☰</Text> {/* Botón de menú no se si al final sera o no funcional*/}
+          <Text style={styles.menuText}>☰</Text>
         </TouchableOpacity>
         <Text style={styles.companyName}>PetConnect</Text>
-        <Image source={require("../assets/imagenes/ELEMENTOS_GENERALES/logo2.png")} style={styles.logo} />
+        <Image
+          source={require("../assets/imagenes/ELEMENTOS_GENERALES/logo2.png")}
+          style={styles.logo}
+        />
       </View>
 
       {/* Información del usuario */}
       <View style={styles.userInfo}>
-        <Image source={require('../assets/imagenes/ELEMENTOS_GENERALES/perfil.png')} style={styles.userImage} />
+        <Image
+          source={require("../assets/imagenes/ELEMENTOS_GENERALES/perfil.png")}
+          style={styles.userImage}
+        />
         <View>
-          <Text style={styles.userName}>Sonia M</Text> {/* Nombre de usuario */}
-          <Text style={styles.userProfile}>SoniaMPets</Text> {/* Perfil*/}
+          <Text style={styles.userName}>Sonia M</Text>
+          <Text style={styles.userProfile}>SoniaMPets</Text>
         </View>
       </View>
 
-      {/* Botones */}
-      <View style={styles.buttons}>
-        <Text style={styles.title}>SECCIONES</Text>
-        <View style={styles.buttonsRow}>
-          <TouchableOpacity style={[styles.button, { backgroundColor: '#FD7712' }]} onPress={() => {/* Navegar a pagina 1 */}}>
-            <Image source={require('../assets/imagenes/principal/huella.png')} style={styles.buttonImage} />
-            <Text style={styles.buttonText}>Patitas al Rescate</Text>
+      {/* Secciones */}
+      <View style={styles.sections}>
+        <Text style={styles.sectionTitle}>SECCIONES</Text>
+        <View style={styles.sectionsRow}>
+          <TouchableOpacity style={[styles.sectionButton, { backgroundColor: "#FD7712" }]}>
+            <Image
+              source={require("../assets/imagenes/principal/huella.png")}
+              style={styles.sectionImage}
+            />
+            <Text style={styles.sectionText}>Patitas al Rescate</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.button, { backgroundColor: '#FD7712' }]} onPress={() => {/* Navegar a pagina 2 */}}>
-            <Image source={require('../assets/imagenes/principal/manos.png')} style={styles.buttonImage} />
-            <Text style={styles.buttonText}>Comunidad Animal</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={[styles.button, { backgroundColor: '#FD7712' }]} onPress={() => {/* Navegar a pagina 3 */}}>
-            <Image source={require('../assets/imagenes/principal/adopt.png')} style={styles.buttonImage} />
-            <Text style={styles.buttonText}>Refugio de Patitas</Text>
+          <TouchableOpacity style={[styles.sectionButton, { backgroundColor: "#FD7712" }]}>
+            <Image
+              source={require("../assets/imagenes/principal/manos.png")}
+              style={styles.sectionImage}
+            />
+            <Text style={styles.sectionText}>Comunidad Animal</Text>
           </TouchableOpacity>
         </View>
-        <View style={styles.buttonsRow}>
-          <TouchableOpacity style={[styles.button, { backgroundColor: '#FD7712' }]}>
-            <Image source={require('../assets/imagenes/principal/huellas.png')} style={styles.buttonImage} />
-            <Text style={styles.buttonText}>Patitas en Marcha</Text>
+        <View style={styles.sectionsRow}>
+          <TouchableOpacity style={[styles.sectionButton, { backgroundColor: "#FD7712" }]}>
+            <Image
+              source={require("../assets/imagenes/principal/adopt.png")}
+              style={styles.sectionImage}
+            />
+            <Text style={styles.sectionText}>Refugio de Patitas</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.button, { backgroundColor: '#FD7712' }]}>
-            <Image source={require('../assets/imagenes/principal/lupa.png')} style={styles.buttonImage} />
-            <Text style={styles.buttonText}>Sobre PetConnect</Text>
+          <TouchableOpacity style={[styles.sectionButton, { backgroundColor: "#FD7712" }]}>
+            <Image
+              source={require("../assets/imagenes/principal/huellas.png")}
+              style={styles.sectionImage}
+            />
+            <Text style={styles.sectionText}>Cuidados de Mascotas</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.sectionsRow}>
+          <TouchableOpacity style={[styles.sectionButton, { backgroundColor: "#FD7712" }]}>
+            <Image
+              source={require("../assets/imagenes/principal/lupa.png")}
+              style={styles.sectionImage}
+            />
+            <Text style={styles.sectionText}>Donaciones</Text>
           </TouchableOpacity>
         </View>
       </View>
 
-      {/* Imágenes del final */}
+      {/* Footer */}
       <View style={styles.footer}>
-        <Text style={styles.subTitle}>PROTECTORAS EN COLABORACIÓN</Text>
+        <Text style={styles.footerTitle}>PROTECTORAS EN COLABORACIÓN</Text>
         <View style={styles.footerImages}>
-          <Image source={require('@/assets/imagenes/principal/protectora1.png')} style={styles.footerImage} />
-          <Image source={require('@/assets/imagenes/principal/protectora2.png')} style={styles.footerImage} />
+          <Image
+            source={require("@/assets/imagenes/principal/protectora1.png")}
+            style={styles.footerImage}
+          />
+          <Image
+            source={require("@/assets/imagenes/principal/protectora2.png")}
+            style={styles.footerImage}
+          />
         </View>
       </View>
     </View>
   );
 };
 
-/* Estilos */
 const styles = StyleSheet.create({
-  container: {
+  main: {
     flex: 1,
-    maxWidth: 740, // Las medidas que nos 
-    height: 1440, // dio Paco (creo q eran estas)
-    margin: 'auto',
-    padding: 16,
-    backgroundColor: '#f0f0f0',
+    backgroundColor: "#194A6E",
+    alignItems: "center",
+    justifyContent: "flex-start",
+    paddingTop: 80,
   },
   header: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingBottom: 16,
-    borderColor: '#ccc',
-    backgroundColor: '#194A6E', // Color de fondo del header
-    paddingHorizontal: 16,
-    borderTopLeftRadius: 16,
-    borderTopRightRadius: 16,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    width: "100%",
+    paddingHorizontal: 20,
+    paddingVertical: 10,
   },
   menuButton: {
-    backgroundColor: 'transparent',
-    padding: 0,
+    padding: 10,
   },
   menuText: {
     fontSize: 32,
-    color: '#fff',
-  },
-  companyInfo: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  logo: {
-    width: 40,
-    height: 40,
-    marginLeft: 8,
+    color: "#F9F9F9",
   },
   companyName: {
-    fontSize: 32, 
-    fontWeight: 'bold',
-    fontFamily: 'WendyOne',
-    color: '#fff', 
+    fontSize: 64,
+    fontWeight: "bold",
+    color: "#F9F9F9",
+    fontFamily: "Roboto",
+  },
+  logo: {
+    width: 100,
+    height: 100,
   },
   userInfo: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginVertical: 0,
-    backgroundColor: '#194A6E', 
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 20,
+    backgroundColor: "#194A6E",
+    width: "90%",
     padding: 16,
-    borderRadius: 0,
-    borderBottomLeftRadius: 16,
-    borderBottomRightRadius: 16,
+    borderRadius: 20,
   },
   userImage: {
     width: 80,
@@ -123,68 +140,81 @@ const styles = StyleSheet.create({
     marginRight: 12,
   },
   userName: {
-    margin: 0,
-    fontSize: 20,
-    color: '#fff', 
+    fontSize: 32,
+    color: "#fff",
+    fontWeight: "bold",
+    fontFamily: "Roboto",
   },
   userProfile: {
-    margin: 0,
-    fontSize: 16,
-    color: '#ccc', 
+    fontSize: 28,
+    color: "#fff",
+    fontFamily: "Roboto",
   },
-  buttons: {
-    alignItems: 'center',
-    marginVertical: 32,
+  sections: {
+    alignItems: "center",
+    width: "100%",
+    marginTop: 40,
+    backgroundColor:"#fff"
   },
-  title: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    color: '#FD7712',
+  sectionTitle: {
+    fontSize: 40,
+    fontWeight: "bold",
+    color: "#FD7712",
     marginBottom: 16,
+    fontFamily: "Roboto",
   },
-  buttonsRow: {
-    flexDirection: 'row',
-    justifyContent: 'center',
+  sectionsRow: {
+    flexDirection: "row",
+    justifyContent: "center",
     marginBottom: 16,
+    width: "100%",
   },
-  button: {
-    marginHorizontal: 8,
-    borderRadius: 8,
-    padding: 8,
-    alignItems: 'center',
+  sectionButton: {
+    width: 180,
+    height: 200,
+    borderRadius: 20,
+    alignItems: "center",
+    justifyContent: "center",
+    marginHorizontal: 10,
   },
-  buttonImage: {
+  sectionImage: {
     width: 100,
     height: 100,
   },
-  buttonText: {
-    marginTop: 8,
-    fontSize: 16,
-    color: '#fff',
-    textAlign: 'center',
+  sectionText: {
+    marginTop: 10,
+    fontSize: 24,
+    fontWeight: "bold",
+    textAlign: "center",
+    fontFamily: "Roboto",
   },
   footer: {
-    alignItems: 'center',
-    marginTop: 32,
-    backgroundColor: '#194A6E', // Color de fondo del footer
-    padding: 16,
-    borderTopLeftRadius: 16,
-    borderTopRightRadius: 16,
+    alignItems: "center",
+    width: "100%",
+    backgroundColor: "#194A6E",
+    padding: 20,
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
+    marginTop: 20,
   },
-  subTitle: {
-    fontSize: 24, // Tamaño más grande
+  footerTitle: {
+    fontSize: 24,
+    color: "#fff",
+    fontWeight: "bold",
     marginBottom: 16,
-    color: '#fff', // Ajustar color del texto para mejor contraste
+    fontFamily: "Roboto",
   },
   footerImages: {
-    flexDirection: 'row',
-    justifyContent: 'center',
+    flexDirection: "row",
+    justifyContent: "center",
+    marginTop: 16,
   },
   footerImage: {
-    width: 120,
-    height: 120,
-    marginHorizontal: 8,
+    width: 160,
+    height: 160,
+    marginHorizontal: 10,
+    borderRadius: 20,
   },
 });
 
-export default principal;
+export default Principal;
