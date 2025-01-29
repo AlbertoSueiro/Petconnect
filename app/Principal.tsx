@@ -1,4 +1,5 @@
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
+import { Link } from "expo-router";
 
 const Principal: React.FC = () => {
   return (
@@ -31,44 +32,43 @@ const Principal: React.FC = () => {
       <View style={styles.sections}>
         <Text style={styles.sectionTitle}>SECCIONES</Text>
         <View style={styles.sectionsRow}>
-          <TouchableOpacity style={[styles.sectionButton, { backgroundColor: "#FD7712" }]}>
-            <Image
-              source={require("../assets/imagenes/principal/huella.png")}
-              style={styles.sectionImage}
-            />
-            <Text style={styles.sectionText}>Patitas al Rescate</Text>
+          <TouchableOpacity style={[styles.button, { backgroundColor: "#FD7712" }]}>
+          <Link href="/mapa" style={styles.buttonContent}>
+            <Image source={require("../assets/imagenes/principal/huella.png")} style={styles.buttonImage} />
+            <Text style={styles.buttonText}>Patitas al Rescate</Text>
+          </Link>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.sectionButton, { backgroundColor: "#FD7712" }]}>
+          <TouchableOpacity style={[styles.button, { backgroundColor: "#FD7712" }]}>
             <Image
               source={require("../assets/imagenes/principal/manos.png")}
-              style={styles.sectionImage}
+              style={styles.buttonImage}
             />
-            <Text style={styles.sectionText}>Comunidad Animal</Text>
+            <Text style={styles.buttonText}>Comunidad Animal</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.sectionsRow}>
-          <TouchableOpacity style={[styles.sectionButton, { backgroundColor: "#FD7712" }]}>
+          <TouchableOpacity style={[styles.button, { backgroundColor: "#FD7712" }]}>
             <Image
               source={require("../assets/imagenes/principal/adopt.png")}
-              style={styles.sectionImage}
+              style={styles.buttonImage}
             />
-            <Text style={styles.sectionText}>Refugio de Patitas</Text>
+            <Text style={styles.buttonText}>Refugio de Patitas</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.sectionButton, { backgroundColor: "#FD7712" }]}>
+          <TouchableOpacity style={[styles.button, { backgroundColor: "#FD7712" }]}>
             <Image
               source={require("../assets/imagenes/principal/huellas.png")}
-              style={styles.sectionImage}
+              style={styles.buttonImage}
             />
-            <Text style={styles.sectionText}>Cuidados de Mascotas</Text>
+            <Text style={styles.buttonText}>Cuidados de Mascotas</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.sectionsRow}>
-          <TouchableOpacity style={[styles.sectionButton, { backgroundColor: "#FD7712" }]}>
+          <TouchableOpacity style={[styles.button, { backgroundColor: "#FD7712" }]}>
             <Image
               source={require("../assets/imagenes/principal/lupa.png")}
-              style={styles.sectionImage}
+              style={styles.buttonImage}
             />
-            <Text style={styles.sectionText}>Donaciones</Text>
+            <Text style={styles.buttonText}>Donaciones</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -169,24 +169,27 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     width: "100%",
   },
-  sectionButton: {
-    width: 180,
-    height: 200,
-    borderRadius: 20,
-    alignItems: "center",
+  button: {
+    width: 150,  
+    height: 150, 
     justifyContent: "center",
-    marginHorizontal: 10,
+    alignItems: "center",
+    borderRadius: 8,
+    padding: 20,
+    margin:10,
   },
-  sectionImage: {
-    width: 100,
-    height: 100,
+  buttonContent: {
+    alignItems: "center", 
   },
-  sectionText: {
-    marginTop: 10,
-    fontSize: 24,
-    fontWeight: "bold",
-    textAlign: "center",
-    fontFamily: "Roboto",
+  buttonImage: {
+    width: 80,  
+    height: 80,
+    margin: 8, 
+  },
+  buttonText: {
+    fontSize: 16,
+    color: "black",
+    
   },
   footer: {
     alignItems: "center",
