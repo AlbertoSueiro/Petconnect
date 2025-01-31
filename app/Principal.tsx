@@ -4,7 +4,7 @@ import { Link } from "expo-router";
 const Principal: React.FC = () => {
   return (
     <View style={styles.main}>
-      {/* Encabezado */}
+      
       <View style={styles.header}>
         <TouchableOpacity style={styles.menuButton} disabled>
           <Text style={styles.menuText}>☰</Text>
@@ -16,7 +16,7 @@ const Principal: React.FC = () => {
         />
       </View>
 
-      {/* Información del usuario */}
+      
       <View style={styles.userInfo}>
         <Image
           source={require("../assets/imagenes/ELEMENTOS_GENERALES/perfil.png")}
@@ -28,7 +28,7 @@ const Principal: React.FC = () => {
         </View>
       </View>
 
-      {/* Secciones */}
+     
       <View style={styles.sections}>
         <Text style={styles.sectionTitle}>SECCIONES</Text>
         <View style={styles.sectionsRow}>
@@ -39,11 +39,11 @@ const Principal: React.FC = () => {
           </Link>
           </TouchableOpacity>
           <TouchableOpacity style={[styles.button, { backgroundColor: "#FD7712" }]}>
-            <Image
-              source={require("../assets/imagenes/principal/manos.png")}
-              style={styles.buttonImage}
-            />
-            <Text style={styles.buttonText}>Comunidad Animal</Text>
+            <Link href="/comunidad" style={styles.buttonContent}>
+              <Image
+                source={require("../assets/imagenes/principal/manos.png")} style={styles.buttonImage}/>
+              <Text style={styles.buttonText}>Comunidad Animal</Text>
+            </Link>
           </TouchableOpacity>
         </View>
         <View style={styles.sectionsRow}>
@@ -73,7 +73,7 @@ const Principal: React.FC = () => {
         </View>
       </View>
 
-      {/* Footer */}
+      
       <View style={styles.footer}>
         <Text style={styles.footerTitle}>PROTECTORAS EN COLABORACIÓN</Text>
         <View style={styles.footerImages}>
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#194A6E",
     alignItems: "center",
     justifyContent: "flex-start",
-    paddingTop: 80,
+    paddingTop: 10,
   },
   header: {
     flexDirection: "row",
@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   menuText: {
-    fontSize: 32,
+    fontSize: 50,
     color: "#F9F9F9",
   },
   companyName: {
@@ -170,10 +170,9 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   button: {
-    width: 150,  
-    height: 150, 
-    justifyContent: "center",
-    alignItems: "center",
+    width: 200,  
+    height: 200, 
+    alignItems:"center",
     borderRadius: 8,
     padding: 20,
     margin:10,
@@ -182,12 +181,12 @@ const styles = StyleSheet.create({
     alignItems: "center", 
   },
   buttonImage: {
-    width: 80,  
-    height: 80,
+    width: 90,  
+    height: 90,
     margin: 8, 
   },
   buttonText: {
-    fontSize: 16,
+    fontSize: 24,
     color: "black",
     
   },
@@ -201,7 +200,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   footerTitle: {
-    fontSize: 24,
+    fontSize: 30,
     color: "#fff",
     fontWeight: "bold",
     marginBottom: 16,
@@ -213,8 +212,8 @@ const styles = StyleSheet.create({
     marginTop: 16,
   },
   footerImage: {
-    width: 160,
-    height: 160,
+    width: 250,
+    height: 250,
     marginHorizontal: 10,
     borderRadius: 20,
   },
