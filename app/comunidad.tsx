@@ -29,7 +29,8 @@ const comunidad = () => {
                             <Link style={styles.menuTextItem} href="/mapa">Patitas al Rescate</Link>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.menuItem}><Link style={styles.menuTextItem} href="/comunidad">Comunidad Animal</Link></TouchableOpacity>
-                        <TouchableOpacity style={styles.menuItem}><Link style={styles.menuTextItem} href="/perros">Refugio Patitas</Link></TouchableOpacity>
+                        {/* falta link a lo de las adopciones */}
+                        <TouchableOpacity style={styles.menuItem}><Link style={styles.menuTextItem} href="/">Refugio Patitas</Link></TouchableOpacity>
                     </View>
                 </View>
             </Modal>

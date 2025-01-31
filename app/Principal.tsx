@@ -48,6 +48,7 @@ const Principal: React.FC = () => {
         </View>
         <View style={styles.sectionsRow}>
           <TouchableOpacity style={[styles.button, { backgroundColor: "#FD7712" }]}>
+            {/* Falta link a la parte de adopciones */}
             <Image
               source={require("../assets/imagenes/principal/adopt.png")}
               style={styles.buttonImage}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
-import { Link} from "expo-router"; 
+
 
 const perros = () => {
   const [menuVisible, setMenuVisible] = useState(false);
