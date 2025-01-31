@@ -19,33 +19,37 @@ const perros = () => {
 
       <View style={styles.infoBlock}>
         <Image source={require("../assets/imagenes/CATALOGO DE ADOPCIONES/Pluto.png")} style={styles.detailImage} />
-        <Text style={styles.title}>Nombre del Perro</Text>
-        <Text style={styles.subtitle}>Descripción breve del perro.</Text>
+        <Text style={styles.title}>Pluto</Text>
+        <Text style={styles.subtitle}>Murcia</Text>
 
         <View style={styles.statsRow}>
           <View style={styles.statBox}>
+            <Text style={styles.statTitle}>Sexo</Text>
+            <Text style={styles.statSubtitle}>Macho</Text>
+          </View>
+          <View style={styles.statBox}>
             <Text style={styles.statTitle}>Edad</Text>
-            <Text style={styles.statSubtitle}>2 años</Text>
+            <Text style={styles.statSubtitle}>1.5 años</Text>
           </View>
           <View style={styles.statBox}>
-            <Text style={styles.statTitle}>Tamaño</Text>
-            <Text style={styles.statSubtitle}>Mediano</Text>
-          </View>
-          <View style={styles.statBox}>
-            <Text style={styles.statTitle}>Energía</Text>
-            <Text style={styles.statSubtitle}>Alta</Text>
+            <Text style={styles.statTitle}>Raza</Text>
+            <Text style={styles.statSubtitle}>Bodeguero</Text>
           </View>
         </View>
 
         <View style={styles.ownerInfo}>
           <Image source={require("../assets/imagenes/CATALOGO DE ADOPCIONES/Eros2.png")} style={styles.ownerImage} />
           <View>
-            <Text style={styles.ownerName}>Juan Pérez</Text>
-            <Text style={styles.ownerNickname}>@juanp</Text>
+            <Text style={styles.ownerName}>Ana</Text>
+            <Text style={styles.ownerNickname}>PerrosAbandona2</Text>
           </View>
         </View>
 
-        <Text style={styles.description}>Este adorable perrito busca un hogar amoroso donde pueda ser feliz.</Text>
+        <Text style={styles.description}>Pluto entró de forma inesperada a una peluquería en
+          la que justo estaba uno de nuestros voluntarios, no
+          llevaba chip y nadie lo ha reclamado así que busca
+          familia definitiva!
+        </Text>
       </View>
 
       <TouchableOpacity style={styles.adoptButton}>
@@ -83,91 +87,97 @@ const styles = StyleSheet.create({
     color: "white",
   },
   logo: {
-    width: 40,
-    height: 40,
+    width: 80,
+    height: 80,
   },
   mainImage: {
-    width: "90%",
-    height: 200,
+    width: 80,
+    height: 80,
     marginVertical: 10,
+    alignSelf: "flex-start",
   },
   infoBlock: {
     width: "90%",
-    backgroundColor: "white",
+    backgroundColor: "#FDB672",
     padding: 20,
     borderRadius: 15,
     alignItems: "center",
   },
   detailImage: {
     width: "100%",
-    height: 150,
-    marginBottom: 10,
+    height: 450,
+    marginBottom: 20,
   },
   title: {
-    fontSize: 24,
+    fontSize: 36,
     fontWeight: "bold",
+    marginTop: 20,
+    alignSelf: "flex-start",
+    color:"#194A6E"
   },
   subtitle: {
-    fontSize: 16,
-    color: "gray",
-    marginBottom: 10,
+    fontSize: 24,
+    color: "#194A6E",
+    marginBottom: 20,
+    alignSelf: "flex-start",
   },
   statsRow: {
     flexDirection: "row",
     justifyContent: "space-between",
     width: "100%",
-    marginBottom: 10,
+    marginBottom: 20,
   },
   statBox: {
     alignItems: "center",
     width: "30%",
-    backgroundColor: "#B5D6ED",
-    padding: 10,
+    backgroundColor: "#fff",
+    padding: 15,
     borderRadius: 8,
   },
   statTitle: {
-    fontSize: 14,
-    fontWeight: "bold",
+    fontSize: 24,
+    color:"#194A6E"
   },
   statSubtitle: {
-    fontSize: 14,
-    color: "gray",
+    fontSize: 32,
+    color:"#194A6E"
   },
   ownerInfo: {
     flexDirection: "row",
     alignItems: "center",
     width: "100%",
-    marginVertical: 10,
+    marginVertical: 20,
   },
   ownerImage: {
-    width: 50,
-    height: 50,
+    width: 70,
+    height: 70,
     borderRadius: 25,
     marginRight: 10,
   },
   ownerName: {
-    fontSize: 18,
+    fontSize: 30,
     fontWeight: "bold",
+    color:"#194A6E"
   },
   ownerNickname: {
-    fontSize: 16,
-    color: "gray",
+    fontSize: 28,
+    color:"#194A6E"
   },
   description: {
-    fontSize: 16,
+    fontSize: 28,
     textAlign: "center",
     marginVertical: 10,
+    color:"#194A6E"
   },
   adoptButton: {
-    backgroundColor: "#FD7712",
-    paddingVertical: 15,
-    paddingHorizontal: 40,
-    borderRadius: 50,
+    backgroundColor: "#194A6E",
+    paddingVertical: 20,
+    paddingHorizontal: 100,
+    borderRadius: 20,
     marginVertical: 20,
   },
   adoptButtonText: {
-    fontSize: 24,
-    fontWeight: "bold",
+    fontSize: 28,
     color: "white",
   },
 });
