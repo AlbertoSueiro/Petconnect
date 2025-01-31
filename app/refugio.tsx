@@ -20,17 +20,13 @@ export default function App() {
             <Modal visible={menuVisible} animationType="slide" transparent>
                 <View style={estilos.menuContainer}>
                     <View style={estilos.menuContent}>
-                    <TouchableOpacity style={estilos.closeButton} onPress={() => setMenuVisible(false)}>
-                        <Text style={estilos.closeText}>X</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={estilos.menuItem}>
-                        <Link href="/Principal"><Text style={estilos.menuTextItem}>Pagina Principal</Text></Link>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={estilos.menuItem}>
-                        <Link href="/mapa"><Text style={estilos.menuTextItem}>Patitas al Rescate</Text></Link>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={estilos.menuItem}><Text style={estilos.menuTextItem}>Comunidad Animal</Text></TouchableOpacity>
-                    <TouchableOpacity style={estilos.menuItem}><Text style={estilos.menuTextItem}>Refugio Patitas</Text></TouchableOpacity>
+                        <TouchableOpacity style={estilos.closeButton} onPress={() => setMenuVisible(false)}>
+                            <Text style={estilos.closeText}>X</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={estilos.menuItem}><Link style={estilos.menuTextItem} href="/Principal">Pagina Principal</Link></TouchableOpacity>
+                        <TouchableOpacity style={estilos.menuItem}><Link style={estilos.menuTextItem} href="/mapa">Patitas al Rescate</Link></TouchableOpacity>
+                        <TouchableOpacity style={estilos.menuItem}><Link style={estilos.menuTextItem} href="/comunidad">Comunidad Animal</Link></TouchableOpacity>
+                        <TouchableOpacity style={estilos.menuItem}><Link style={estilos.menuTextItem} href="/refugio">Refugio Patitas</Link></TouchableOpacity>
                     </View>
                 </View>
             </Modal>
@@ -65,30 +61,46 @@ export default function App() {
                 <View style={estilos.contenedorPerros}>
                     <View style={estilos.cuadradosPerros}>
                         <View style={estilos.cuadradoPerro}>
-                            <Image style={estilos.perrera} source={require("../assets/imagenes/CATALOGO DE ADOPCIONES/Pluto.png")} />
-                            <Image style={estilos.like} source={require("../assets/imagenes/CATALOGO DE ADOPCIONES/like.png")} />
-                            <Text style={estilos.textoBold}>Pluto</Text>
-                            <Text style={estilos.textoBold}>Macho 1,5 años</Text>
+                            <Link href={"/perros"}>
+                                <Image style={estilos.perrera} source={require("../assets/imagenes/CATALOGO DE ADOPCIONES/Pluto.png")} />
+                                <Image style={estilos.like} source={require("../assets/imagenes/CATALOGO DE ADOPCIONES/like.png")} />
+                                <View style={estilos.textoContainer}>
+                                    <Text style={estilos.textoBold}>Pluto </Text>
+                                    <Text style={estilos.textoBold}>Macho 1,5 años</Text>
+                                </View>
+                            </Link>
                         </View>
                         <View style={estilos.cuadradoPerro}>
-                            <Image style={estilos.perrera} source={require("../assets/imagenes/CATALOGO DE ADOPCIONES/Afro y Shaggy.png")} />
-                            <Image style={estilos.like} source={require("../assets/imagenes/CATALOGO DE ADOPCIONES/like.png")} />
-                            <Text style={estilos.textoBold}>Afro y Shaggy</Text>
-                            <Text style={estilos.textoBold}>Machos 3 meses</Text>
+                            <Link href={"/perros"}>
+                                <Image style={estilos.perrera} source={require("../assets/imagenes/CATALOGO DE ADOPCIONES/Afro y Shaggy.png")} />
+                                <Image style={estilos.like} source={require("../assets/imagenes/CATALOGO DE ADOPCIONES/like.png")} />
+                                <View style={estilos.textoContainer}>
+                                    <Text style={estilos.textoBold}>Afro y Shaggy </Text>
+                                    <Text style={estilos.textoBold}>Machos 3 meses</Text>
+                                </View>
+                            </Link>
                         </View>
                     </View>
                     <View style={estilos.cuadradosPerros}>
                         <View style={estilos.cuadradoPerro}>
-                            <Image style={estilos.perrera} source={require("../assets/imagenes/CATALOGO DE ADOPCIONES/Stelle.png")} />
-                            <Image style={estilos.like} source={require("../assets/imagenes/CATALOGO DE ADOPCIONES/like.png")} />
-                            <Text style={estilos.textoBold}>Stelle</Text>
-                            <Text style={estilos.textoBold}>Hembra 1,5 años</Text>
+                            <Link href={"/perros"}>
+                                <Image style={estilos.perrera} source={require("../assets/imagenes/CATALOGO DE ADOPCIONES/Stelle.png")} />
+                                <Image style={estilos.like} source={require("../assets/imagenes/CATALOGO DE ADOPCIONES/like.png")} />
+                                <View style={estilos.textoContainer}>
+                                    <Text style={estilos.textoBold}>Stelle </Text>
+                                    <Text style={estilos.textoBold}>Hembra 1,5 años</Text>
+                                </View>
+                            </Link>
                         </View>
                         <View style={estilos.cuadradoPerro}>
-                            <Image style={estilos.perrera} source={require("../assets/imagenes/CATALOGO DE ADOPCIONES/Eros.png")} />
-                            <Image style={estilos.like} source={require("../assets/imagenes/CATALOGO DE ADOPCIONES/like.png")} />
-                            <Text style={estilos.textoBold}>Eros</Text>
-                            <Text style={estilos.textoBold}>Macho 1 año</Text>
+                            <Link href={"/perros"}>
+                                <Image style={estilos.perrera} source={require("../assets/imagenes/CATALOGO DE ADOPCIONES/Eros.png")} />
+                                <Image style={estilos.like} source={require("../assets/imagenes/CATALOGO DE ADOPCIONES/like.png")} />
+                                <View style={estilos.textoContainer}>
+                                    <Text style={estilos.textoBold}>Eros </Text>
+                                    <Text style={estilos.textoBold}>Macho 1 año</Text>
+                                </View>
+                            </Link>
                         </View>
                     </View>
                 </View>
@@ -217,10 +229,8 @@ textoBold:{
     color: "#194A6E",
     fontWeight: "bold",
 },
+
 contenedorPerros: {
-    flexDirection: "column",  
-    alignItems: "center",
-    justifyContent: "center",
     width: "90%",
     marginTop: 50,
 },
@@ -231,30 +241,33 @@ cuadradosPerros: {
     marginTop: 20,
     flexWrap: "wrap",          
 },
-
 cuadradoPerro: {
     backgroundColor: "#FDB672",
     width: "48%",           
     height: 300,
     borderRadius: 20,
-    justifyContent: "center",
-    alignItems: "center",
     padding: 10,
     marginBottom: 20,           
 },
+textoContainer: {
+    flexDirection: 'column',    
+    justifyContent: 'center',  
+    alignItems: 'center',       
+    position: 'absolute',                    
+    left: 10,                   
+    right: 10,                  
+},
 perrera: {
     width: 290,               
-    height: 190,
+    height: 200,
     borderRadius: 20,          
 },
 like: {
     width: 60,               
     height: 60,
-    borderRadius: 500, 
-    marginBottom:-40,
-    bottom:10, 
-    left:120        
+    borderRadius: 500,    
+    bottom:20,
+    left:250,
 },
-
 });
 

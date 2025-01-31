@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { View, Text, Image, StyleSheet, TouchableOpacity, TextInput, Modal } from "react-native";
+import { Link} from "expo-router"; 
 
 const PatitasRescate: React.FC = () => {
   const [menuVisible, setMenuVisible] = useState(false);
 
   return (
     <View style={styles.main}>
-      {/* HEADER */}
+      
       <View style={styles.header}>
         <TouchableOpacity style={styles.menuButton} onPress={() => setMenuVisible(true)}>
           <Text style={styles.menuText}>☰</Text>
@@ -15,22 +16,22 @@ const PatitasRescate: React.FC = () => {
         <Image source={require("../assets/imagenes/ELEMENTOS_GENERALES/logo2.png")} style={styles.logo} />
       </View>
 
-      {/* MENÚ LATERAL */}
+      
       <Modal visible={menuVisible} animationType="slide" transparent>
         <View style={styles.menuContainer}>
           <View style={styles.menuContent}>
             <TouchableOpacity style={styles.closeButton} onPress={() => setMenuVisible(false)}>
               <Text style={styles.closeText}>X</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.menuItem}><Text style={styles.menuTextItem}>Pagina Principal</Text></TouchableOpacity>
-            <TouchableOpacity style={styles.menuItem}><Text style={styles.menuTextItem}>Patitas al Rescate</Text></TouchableOpacity>
-            <TouchableOpacity style={styles.menuItem}><Text style={styles.menuTextItem}>Comunidad Animal</Text></TouchableOpacity>
-            <TouchableOpacity style={styles.menuItem}><Text style={styles.menuTextItem}>Refugio Patitas</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.menuItem}><Link style={styles.menuTextItem} href="/Principal">Pagina Principal</Link></TouchableOpacity>
+            <TouchableOpacity style={styles.menuItem}><Link style={styles.menuTextItem} href="/mapa">Patitas al Rescate</Link></TouchableOpacity>
+            <TouchableOpacity style={styles.menuItem}><Link style={styles.menuTextItem} href="/comunidad">Comunidad Animal</Link></TouchableOpacity>
+            <TouchableOpacity style={styles.menuItem}><Link style={styles.menuTextItem} href="/refugio">Refugio Patitas</Link></TouchableOpacity>
           </View>
         </View>
       </Modal>
 
-      {/* BLOQUES DE TEXTO */}
+      
       <View style={styles.textContainer}>
         <Text style={styles.mainText}>
           Este mapa conecta a quienes necesitan ayuda con quienes están dispuestos a ofrecerla.
@@ -40,10 +41,10 @@ const PatitasRescate: React.FC = () => {
         </Text>
       </View>
 
-      {/* IMAGEN PRINCIPAL */}
+      
       <Image source={require("../assets/imagenes/ELEMENTOS_GENERALES/mapa.png")} style={styles.mainImage} />
 
-      {/* BLOQUE DE TEXTO CON IMAGEN */}
+      
       <View style={styles.roundedTextContainer}>
         <Image source={require("../assets/imagenes/ELEMENTOS_GENERALES/Vector.png")} style={styles.roundedImage} />
         <Text style={styles.roundedText}>
@@ -51,7 +52,7 @@ const PatitasRescate: React.FC = () => {
         </Text>
       </View>
 
-      {/* CAMPO DE TEXTO */}
+      
       <TextInput
         style={styles.input}
         placeholder="Describe la situación aquí..."
@@ -59,7 +60,7 @@ const PatitasRescate: React.FC = () => {
         multiline
       />
 
-      {/* BOTÓN ENVIAR */}
+      
       <TouchableOpacity style={styles.sendButton}>
         <Text style={styles.sendButtonText}>ENVIAR</Text>
       </TouchableOpacity>
@@ -81,7 +82,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     width: "100%",
     paddingHorizontal: 20,
-    paddingVertical: 10,
+    paddingVertical: 20,
   },
   menuButton: {
     padding: 10,
@@ -164,8 +165,8 @@ const styles = StyleSheet.create({
     width: "90%",
   },
   roundedImage: {
-    width: 50,
-    height: 50,
+    width: 40,
+    height: 60,
     marginRight: 15,
   },
   roundedText: {
@@ -186,7 +187,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   sendButton: {
-    backgroundColor: "#FDB672",
+    backgroundColor: "#FD7712",
     width: 200,
     height: 60,
     borderRadius: 30,

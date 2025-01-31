@@ -33,7 +33,6 @@ export default function App() {
             placeholderTextColor="#666666"
             secureTextEntry
           />
-
         </View>
         <View style={estilos.contenedorBotones}>
           <TouchableOpacity style={estilos.boton}>
