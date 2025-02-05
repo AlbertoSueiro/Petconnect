@@ -93,19 +93,19 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "space-between",
         width: "100%",
-        paddingHorizontal: 8,
+        paddingHorizontal: 7.2,
         backgroundColor: "#194A6E",
-        paddingVertical: 20,
+        paddingVertical: 18,
     },
     menuButton: {
-        padding: 5,
+        padding: 4.5,
     },
     menuText: {
-        fontSize: 25,
+        fontSize: 22.5,
         color: "white",
     },
     headerTitle: {
-        fontSize: 25,
+        fontSize: 22.5,
         color: "white",
     },
     logo: {
@@ -113,9 +113,9 @@ const styles = StyleSheet.create({
         height: 40,
     },
     smallLogo: {
-        width: 25,
-        height: 25,
-        marginRight: 5,
+        width: 22.5,
+        height: 22.5,
+        marginRight: 4.5,
     },
     menuContainer: {
         flex: 1,
@@ -126,11 +126,11 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
         width: "70%",
         height: "100%",
-        paddingTop: 20,
-        paddingHorizontal: 10,
+        paddingTop: 18,
+        paddingHorizontal: 9,
     },
     title: {
-        fontSize: 22.5,
+        fontSize: 20.25,
         color: "#194A6E",
         alignContent: "center",
         textAlign: "center",
@@ -138,15 +138,15 @@ const styles = StyleSheet.create({
     titleContainer: {
         flexDirection: "row",
         alignItems: "center",
-        marginBottom: 15,
+        marginBottom: 13.5,
         textAlign: "center"
     },
     closeButton: {
         alignSelf: "flex-end",
-        padding: 5,
+        padding: 4.5,
     },
     menuItem: {
-        paddingVertical: 7.5,
+        paddingVertical: 6.75,
     },
     menuTextItem: {
         fontSize: 12,
@@ -161,9 +161,9 @@ const styles = StyleSheet.create({
     textBlock: {
         width: "90%",
         backgroundColor: "#FDB672",
-        padding: 25,
-        borderRadius: 25,
-        marginVertical: 12.5,
+        padding: 22.5,
+        borderRadius: 22.5,
+        marginVertical: 11.25,
     },
     textBlock2: {
         width: "100%",
@@ -171,52 +171,52 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     paragraph: {
-        fontSize: 15,
+        fontSize: 13.5,
         color: "black",
         textAlign: "center"
     },
     subBlock: {
         flexDirection: "row",
         alignItems: "center",
-        padding: 12.5,
+        padding: 11.25,
         backgroundColor: "#B5D6ED",
-        borderRadius: 4,
-        marginVertical: 15,
+        borderRadius: 3.6,
+        marginVertical: 13.5,
         width: "100%",
         height: "20%",
     },
     icon: {
-        width: 20,
-        height: 20,
-        marginRight: 2.5,
+        width: 18,
+        height: 18,
+        marginRight: 2.25,
     },
     number: {
-        fontSize: 15,
+        fontSize: 13.5,
         fontWeight: "bold",
-        marginRight: 5,
+        marginRight: 4.5,
     },
     subText: {
-        fontSize: 15,
+        fontSize: 13.5,
         flex: 1,
     },
     footer: {
         width: "100%",
-        height: "10%",
+        height: "9%",
         backgroundColor: "#194A6E",
         alignItems: "center",
     },
     footerButton: {
         backgroundColor: "#FD7712",
-        paddingVertical: 7.5,
-        paddingHorizontal: 20,
-        borderRadius: 25,
-        marginVertical:15,
-        width:120,
-        height:45,
+        paddingVertical: 6.75,
+        paddingHorizontal: 18,
+        borderRadius: 22.5,
+        marginVertical:13.5,
+        width:108,
+        height:40.5,
     },
     footerText: {
-        fontSize: 15,
-        padding:7,
+        fontSize: 13.5,
+        padding:6.3,
     },
 });
 

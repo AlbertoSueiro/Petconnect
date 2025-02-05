@@ -108,159 +108,160 @@ export default function App() {
         </View>
     );
 }
-    
+
 const estilos = StyleSheet.create({
 
-main: {
-    flex: 1,
-    backgroundColor: '#F9F9F9',
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-},
-menuContainer: {
-    flex: 1,
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
-    justifyContent: "center",
-},
-menuContent: {
-    backgroundColor: "#fff",
-    width: "35%",
-    height: "100%",
-    paddingTop: 20,
-    paddingHorizontal: 10,
-},
-closeButton: {
-    alignSelf: "flex-end",
-    padding: 5,
-},
-closeText: {
-    fontSize: 12,
-    fontWeight: "bold",
-    color: "#194A6E",
-},
-menuItem: {
-    paddingVertical: 7.5,
-},
-menuTextItem: {
-    fontSize: 11,
-    color: "#194A6E",
-    fontWeight: "bold",
-},
-Logo: {
-    width: 50,
-    height: 50,
-},
-header: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    width: "100%",
-    backgroundColor:'#194A6E',
-    paddingHorizontal: 15,
-    paddingVertical: 15,
-},
-menuButton: {
-    padding: 5,
-},
-menuText: {
-    fontSize: 21,
-    color: "#F9F9F9",
-},
-companyName: {
-    fontSize: 24,
-    color: "#F9F9F9",
-    fontFamily: "Roboto",
-},
-cuadradoNaranaja: {
-    backgroundColor:'#FDB672',
-    width: 237.5,
-    height: 142.5,
-    borderRadius: 10,
-    marginTop: 15,
-    display:'flex',
-    justifyContent:'center',
-    alignItems:'center',
-    textAlign: 'center',
-},
-texto: {
-    fontSize: 12,
-    color:'#000000',
-    paddingHorizontal: 10,
-    paddingVertical: 10,
-},
-perrosImg: {
-    width: 217.5,
-    height: 30,
-    marginBottom: -12,
-},
-contenedorAnimales: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    width: "90%",
-    marginTop: 25,
-    flexWrap: "wrap",
-},
-textoCat: {
-    fontSize: 18,
-    color: "#194A6E",
-},
-cuadradosContenedor: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    width: "100%",
-    marginTop: 10, 
-},
-cuadrado: {
-    backgroundColor: "#FDB672",
-    width: 100,
-    height: 100,
-    borderRadius: 10,
-    justifyContent: "center",
-    alignItems: "center",
-    padding: 5,
-},
-animales: {
-    width: 72.5,
-    height: 72.5,
-},
-textoBold: {
-    fontSize: 12,
-    color: "#194A6E",
-    fontWeight: "bold",
-},
-contenedorPerros: {
-    width: "92%",
-    marginTop: 25,
-},
-cuadradosPerros: {
-    flexDirection: "row",       
-    justifyContent: "space-between",
-    width: "100%",
-    marginTop: 10,
-    flexWrap: "wrap",          
-},
-cuadradoPerro: {
-    backgroundColor: "#FDB672",
-    width: "48%",           
-    height: 150,
-    borderRadius: 10,
-    padding: 10,
-    marginBottom: 10,           
-},
-textoContainer: {
-    flexDirection: 'column',    
-    justifyContent: 'center',  
-    alignItems: 'center',             
-},
-perrera: {
-    width: 145,               
-    height: 100,
-    borderRadius: 10,          
-},
-like: {
-    width: 30,               
-    height: 30,
-    borderRadius: 250,    
-},
+    main: {
+        flex: 1,
+        backgroundColor: '#F9F9F9',
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+    },
+    menuContainer: {
+        flex: 1,
+        backgroundColor: "rgba(0, 0, 0, 0.5)",
+        justifyContent: "center",
+    },
+    menuContent: {
+        backgroundColor: "#fff",
+        width: "35%",
+        height: "100%",
+        paddingTop: 18,
+        paddingHorizontal: 9,
+    },
+    closeButton: {
+        alignSelf: "flex-end",
+        padding: 4.5,
+    },
+    closeText: {
+        fontSize: 12,
+        fontWeight: "bold",
+        color: "#194A6E",
+    },
+    menuItem: {
+        paddingVertical: 6.75,
+    },
+    menuTextItem: {
+        fontSize: 12.0,
+        color: "#194A6E",
+        fontWeight: "bold",
+    },
+    Logo: {
+        width: 45,
+        height: 45,
+    },
+    header: {
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
+        width: "100%",
+        backgroundColor:'#194A6E',
+        paddingHorizontal: 13.5,
+        paddingVertical: 13.5,
+    },
+    menuButton: {
+        padding: 4.5,
+    },
+    menuText: {
+        fontSize: 18.9,
+        color: "#F9F9F9",
+    },
+    companyName: {
+        fontSize: 21.6,
+        color: "#F9F9F9",
+        fontFamily: "Roboto",
+    },
+    cuadradoNaranaja: {
+        backgroundColor:'#FDB672',
+        width: 213.75,
+        height: 128.25,
+        borderRadius: 10,
+        marginTop: 13.5,
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center',
+        textAlign: 'center',
+    },
+    texto: {
+        fontSize: 10.8,
+        color:'#000000',
+        paddingHorizontal: 9,
+        paddingVertical: 9,
+    },
+    perrosImg: {
+        width: 196.75,
+        height: 27,
+        marginBottom: -10.8,
+    },
+    contenedorAnimales: {
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
+        width: "90%",
+        marginTop: 22.5,
+        flexWrap: "wrap",
+    },
+    textoCat: {
+        fontSize: 16.2,
+        color: "#194A6E",
+    },
+    cuadradosContenedor: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        width: "100%",
+        marginTop: 9,
+    },
+    cuadrado: {
+        backgroundColor: "#FDB672",
+        width: 90,
+        height: 90,
+        borderRadius: 10,
+        justifyContent: "center",
+        alignItems: "center",
+        padding: 4.5,
+    },
+    animales: {
+        width: 65.25,
+        height: 65.25,
+    },
+    textoBold: {
+        fontSize: 10.8,
+        color: "#194A6E",
+        fontWeight: "bold",
+    },
+    contenedorPerros: {
+        width: "92%",
+        marginTop: 22.5,
+    },
+    cuadradosPerros: {
+        flexDirection: "row",       
+        justifyContent: "space-between",
+        width: "100%",
+        marginTop: 9,
+        flexWrap: "wrap",          
+    },
+    cuadradoPerro: {
+        backgroundColor: "#FDB672",
+        width: "48%",
+        height: 135,
+        borderRadius: 10,
+        padding: 9,
+        marginBottom: 9,
+    },
+    textoContainer: {
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',             
+    },
+    perrera: {
+        width: 130.5,
+        height: 90,
+        borderRadius: 10,          
+    },
+    like: {
+        width: 27,
+        height: 27,
+        borderRadius: 225,
+    },
 });
+    
