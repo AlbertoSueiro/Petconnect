@@ -29,7 +29,7 @@ const perros = () => {
           </View>
       </Modal>
 
-      <Image source={require("../assets/imagenes/ELEMENTOS_GENERALES/flechita.png")} style={styles.mainImage} />
+      <Image source={require("../assets/imagenes/ELEMENTOS_GENERALES/flechita.png")} style={[styles.mainImage, {marginLeft:5}]} />
 
       <View style={styles.infoBlock}>
         <Image source={require("../assets/imagenes/CATALOGO DE ADOPCIONES/Pluto.png")} style={styles.detailImage} />
@@ -84,145 +84,150 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     width: "100%",
-    paddingHorizontal: 16,
+    paddingHorizontal: 8,
     backgroundColor: "#194A6E",
-    paddingVertical: 40,
+    paddingVertical: 20,
   },
   menuButton: {
-    padding: 10,
+    padding: 5,
   },
   menuText: {
-    fontSize: 40,
+    fontSize: 20,
     color: "white",
   },
   headerTitle: {
-    fontSize: 40,
+    fontSize: 20,
     fontWeight: "bold",
     color: "white",
   },
-  
-menuContainer: {
-  flex: 1,
-  backgroundColor: "rgba(0, 0, 0, 0.5)",
-  justifyContent: "center",
-},
-menuContent: {
-  backgroundColor: "#fff",
-  width: "70%",
-  height: "100%",
-  paddingTop: 40,
-  paddingHorizontal: 20,
-},
-closeButton: {
-  alignSelf: "flex-end",
-  padding: 10,
-},
-closeText: {
-  fontSize: 24,
-  fontWeight: "bold",
-  color: "#194A6E",
-},
-menuItem: {
-  paddingVertical: 15,
-},
-menuTextItem: {
-  fontSize: 22,
-  color: "#194A6E",
-  fontWeight: "bold",
-},
+  menuContainer: {
+    flex: 1,
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    justifyContent: "center",
+  },
+  menuContent: {
+    backgroundColor: "#fff",
+    width: "70%",
+    height: "100%",
+    paddingTop: 20,
+    paddingHorizontal: 10,
+  },
+  closeButton: {
+    alignSelf: "flex-end",
+    padding: 5,
+  },
+  closeText: {
+    fontSize: 12,
+    fontWeight: "bold",
+    color: "#194A6E",
+  },
+  menuItem: {
+    paddingVertical: 7.5,
+  },
+  menuTextItem: {
+    fontSize: 11,
+    color: "#194A6E",
+    fontWeight: "bold",
+  },
   logo: {
-    width: 80,
-    height: 80,
+    width: 40,
+    height: 40,
   },
   mainImage: {
-    width: 80,
-    height: 80,
-    marginVertical: 10,
+    width: 40,
+    height: 40,
+    marginVertical: 5,
     alignSelf: "flex-start",
   },
   infoBlock: {
-    width: "90%",
+    width: "85%",
+    height: "68%",
     backgroundColor: "#FDB672",
-    padding: 20,
-    borderRadius: 15,
+    padding: 10,
+    borderRadius: 7.5,
     alignItems: "center",
   },
   detailImage: {
-    width: "100%",
-    height: 450,
-    marginBottom: 20,
+    width: "90%",
+    height: 225,
+    marginBottom: 10,
+    borderRadius: 10,
   },
   title: {
-    fontSize: 36,
+    fontSize: 18,
     fontWeight: "bold",
-    marginTop: 20,
+    marginTop: 15,
+    marginBottom:5,
     alignSelf: "flex-start",
-    color:"#194A6E"
+    color: "#194A6E",
   },
   subtitle: {
-    fontSize: 24,
+    fontSize: 12,
     color: "#194A6E",
-    marginBottom: 20,
+    marginBottom: 15,
     alignSelf: "flex-start",
   },
   statsRow: {
     flexDirection: "row",
     justifyContent: "space-between",
     width: "100%",
-    marginBottom: 20,
+    marginBottom: 15,
   },
   statBox: {
     alignItems: "center",
     width: "30%",
     backgroundColor: "#fff",
-    padding: 15,
-    borderRadius: 8,
+    padding: 7.5,
+    borderRadius: 10,
   },
   statTitle: {
-    fontSize: 24,
-    color:"#194A6E"
+    fontSize: 12,
+    color: "#194A6E",
   },
   statSubtitle: {
-    fontSize: 32,
-    color:"#194A6E"
+    fontSize: 16,
+    color: "#194A6E",
   },
   ownerInfo: {
     flexDirection: "row",
     alignItems: "center",
     width: "100%",
-    marginVertical: 20,
+    marginVertical: 10,
   },
   ownerImage: {
-    width: 70,
-    height: 70,
-    borderRadius: 25,
-    marginRight: 10,
+    width: 35,
+    height: 35,
+    borderRadius: 12.5,
+    marginRight: 5,
   },
   ownerName: {
-    fontSize: 30,
+    fontSize: 15,
     fontWeight: "bold",
-    color:"#194A6E"
+    color: "#194A6E",
   },
   ownerNickname: {
-    fontSize: 28,
-    color:"#194A6E"
+    fontSize: 14,
+    color: "#194A6E",
   },
   description: {
-    fontSize: 28,
+    fontSize: 16,
     textAlign: "center",
-    marginVertical: 10,
-    color:"#194A6E"
+    marginVertical: 5,
+    color: "#194A6E",
   },
   adoptButton: {
     backgroundColor: "#194A6E",
-    paddingVertical: 20,
-    paddingHorizontal: 100,
-    borderRadius: 20,
-    marginVertical: 20,
+    paddingVertical: 10,
+    paddingHorizontal: 50,
+    borderRadius: 10,
+    marginVertical: 40,
+    width:250,
+    height:60,
   },
   adoptButtonText: {
-    fontSize: 28,
+    fontSize: 14,
     color: "white",
+    padding:10,
   },
 });
 

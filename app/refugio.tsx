@@ -34,7 +34,7 @@ export default function App() {
             <ScrollView contentContainerStyle={{ flexGrow: 1, alignItems:'center' }}>
                 <View style={estilos.cuadradoNaranaja}>
                     <Text style={[estilos.texto, { fontWeight: "bold" }]}>Adoptar es un compromiso para toda la vida, piénsalo bien antes de dar el paso.</Text>
-                    <Text style={estilos.texto}>Adoptar es un compromiso para toda la vida, piénsalo bien antes de dar el paso.</Text>
+                    <Text style={estilos.texto}>Si no puedes cuidarlo hoy mañana y siempre no adoptes.</Text>
                     <Image style={estilos.perrosImg} source={require("../assets/imagenes/CATALOGO DE ADOPCIONES/perros.png")}/>
                 </View>
 
@@ -116,7 +116,7 @@ main: {
     backgroundColor: '#F9F9F9',
     alignItems: 'center',
     justifyContent: 'flex-start',
-  },
+},
 menuContainer: {
     flex: 1,
     backgroundColor: "rgba(0, 0, 0, 0.5)",
@@ -124,31 +124,31 @@ menuContainer: {
 },
 menuContent: {
     backgroundColor: "#fff",
-    width: "70%",
+    width: "35%",
     height: "100%",
-    paddingTop: 40,
-    paddingHorizontal: 20,
+    paddingTop: 20,
+    paddingHorizontal: 10,
 },
 closeButton: {
     alignSelf: "flex-end",
-    padding: 10,
+    padding: 5,
 },
 closeText: {
-    fontSize: 24,
+    fontSize: 12,
     fontWeight: "bold",
     color: "#194A6E",
 },
 menuItem: {
-    paddingVertical: 15,
+    paddingVertical: 7.5,
 },
 menuTextItem: {
-    fontSize: 22,
+    fontSize: 11,
     color: "#194A6E",
     fontWeight: "bold",
 },
 Logo: {
-    width: 100,
-    height: 100,
+    width: 50,
+    height: 50,
 },
 header: {
     flexDirection: "row",
@@ -156,118 +156,111 @@ header: {
     justifyContent: "space-between",
     width: "100%",
     backgroundColor:'#194A6E',
-    paddingHorizontal: 30,
-    paddingVertical:30,
-  },
+    paddingHorizontal: 15,
+    paddingVertical: 15,
+},
 menuButton: {
-    padding: 10,
-  },
+    padding: 5,
+},
 menuText: {
-    fontSize: 42,
+    fontSize: 21,
     color: "#F9F9F9",
-  },
+},
 companyName: {
-    fontSize: 48,
+    fontSize: 24,
     color: "#F9F9F9",
     fontFamily: "Roboto",
-  },
-cuadradoNaranaja:{
+},
+cuadradoNaranaja: {
     backgroundColor:'#FDB672',
-    width: 475,
-    height: 285,  
-    borderRadius:20,
-    marginTop: 30,
+    width: 237.5,
+    height: 142.5,
+    borderRadius: 10,
+    marginTop: 15,
     display:'flex',
     justifyContent:'center',
     alignItems:'center',
-    textAlign: 'center', 
+    textAlign: 'center',
 },
-texto:{
-    fontSize: 22,
+texto: {
+    fontSize: 12,
     color:'#000000',
-    paddingHorizontal:20,
-    paddingVertical:20
+    paddingHorizontal: 10,
+    paddingVertical: 10,
 },
-perrosImg:{
-    width:435,
-    height:60,
-    marginBottom:-25,
+perrosImg: {
+    width: 217.5,
+    height: 30,
+    marginBottom: -12,
 },
 contenedorAnimales: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
     width: "90%",
-    marginTop: 50,
+    marginTop: 25,
     flexWrap: "wrap",
 },
-textoCat:{
-    fontSize: 36,
+textoCat: {
+    fontSize: 18,
     color: "#194A6E",
 },
 cuadradosContenedor: {
     flexDirection: "row",
     justifyContent: "space-between",
     width: "100%",
-    marginTop: 20, 
+    marginTop: 10, 
 },
 cuadrado: {
     backgroundColor: "#FDB672",
-    width: 200,
-    height: 200,
-    borderRadius: 20,
+    width: 100,
+    height: 100,
+    borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
-    padding: 10,
+    padding: 5,
 },
 animales: {
-    width: 145,
-    height: 145,
+    width: 72.5,
+    height: 72.5,
 },
-textoBold:{
-    fontSize: 24,
+textoBold: {
+    fontSize: 12,
     color: "#194A6E",
     fontWeight: "bold",
 },
-
 contenedorPerros: {
-    width: "90%",
-    marginTop: 50,
+    width: "92%",
+    marginTop: 25,
 },
 cuadradosPerros: {
     flexDirection: "row",       
     justifyContent: "space-between",
     width: "100%",
-    marginTop: 20,
+    marginTop: 10,
     flexWrap: "wrap",          
 },
 cuadradoPerro: {
     backgroundColor: "#FDB672",
     width: "48%",           
-    height: 300,
-    borderRadius: 20,
+    height: 150,
+    borderRadius: 10,
     padding: 10,
-    marginBottom: 20,           
+    marginBottom: 10,           
 },
 textoContainer: {
     flexDirection: 'column',    
     justifyContent: 'center',  
-    alignItems: 'center',       
-    position: 'absolute',                    
-    left: 10,                   
-    right: 10,                  
+    alignItems: 'center',             
 },
 perrera: {
-    width: 290,               
-    height: 200,
-    borderRadius: 20,          
+    width: 145,               
+    height: 100,
+    borderRadius: 10,          
 },
 like: {
-    width: 60,               
-    height: 60,
-    borderRadius: 500,    
-    bottom:20,
-    left:250,
+    width: 30,               
+    height: 30,
+    borderRadius: 250,    
 },
 });
-
